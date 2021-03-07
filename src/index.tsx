@@ -1,12 +1,12 @@
-import './index.css'
+import './index.scss'
 import './i18n'
 
+import { Result } from 'antd'
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { Result } from 'antd'
 
 ReactDOM.render(
   <React.StrictMode>

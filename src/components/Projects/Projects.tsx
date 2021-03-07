@@ -10,7 +10,7 @@ const Projects: FC = () => {
   return (
     <>
       <Row gutter={[16, 16]}>
-        <Col xs={12} lg={6}>
+        <Col sm={24} md={12}>
           <Card title={t('project title')}>
             <Paragraph>{t('project description')}</Paragraph>
             <Paragraph>{t('project description')}</Paragraph>
@@ -18,7 +18,7 @@ const Projects: FC = () => {
             <Paragraph>{t('project description')}</Paragraph>
           </Card>
         </Col>
-        <Col xs={12} lg={6}>
+        <Col sm={24} md={12}>
           <Card title={t('project title')}>
             <Paragraph>{t('project description')}</Paragraph>
             <Paragraph>{t('project description')}</Paragraph>
@@ -26,7 +26,7 @@ const Projects: FC = () => {
             <Paragraph>{t('project description')}</Paragraph>
           </Card>
         </Col>
-        <Col xs={12} lg={6}>
+        <Col sm={24} md={12}>
           <Card title={t('project title')}>
             <Paragraph>{t('project description')}</Paragraph>
             <Paragraph>{t('project description')}</Paragraph>
@@ -34,7 +34,7 @@ const Projects: FC = () => {
             <Paragraph>{t('project description')}</Paragraph>
           </Card>
         </Col>
-        <Col xs={12} lg={6}>
+        <Col sm={24} md={12}>
           <Card title={t('project title')}>
             <Paragraph>{t('project description')}</Paragraph>
             <Paragraph>{t('project description')}</Paragraph>
@@ -42,7 +42,7 @@ const Projects: FC = () => {
             <Paragraph>{t('project description')}</Paragraph>
           </Card>
         </Col>
-        <Col xs={12} lg={6}>
+        <Col sm={24} md={12}>
           <Card title={t('project title')}>
             <Paragraph>{t('project description')}</Paragraph>
             <Paragraph>{t('project description')}</Paragraph>
@@ -50,7 +50,7 @@ const Projects: FC = () => {
             <Paragraph>{t('project description')}</Paragraph>
           </Card>
         </Col>
-        <Col xs={12} lg={6}>
+        <Col sm={24} md={12}>
           <Card title={t('project title')}>
             <Paragraph>{t('project description')}</Paragraph>
             <Paragraph>{t('project description')}</Paragraph>
@@ -58,7 +58,7 @@ const Projects: FC = () => {
             <Paragraph>{t('project description')}</Paragraph>
           </Card>
         </Col>
-        <Col xs={12} lg={6}>
+        <Col sm={24} md={12}>
           <Card title={t('project title')}>
             <Paragraph>{t('project description')}</Paragraph>
             <Paragraph>{t('project description')}</Paragraph>

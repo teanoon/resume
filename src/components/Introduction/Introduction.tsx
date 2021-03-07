@@ -1,5 +1,5 @@
-import { Space, Typography } from 'antd'
-import { FC } from 'react'
+import { Card, Space, Typography } from 'antd'
+import React, { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const { Title, Paragraph } = Typography
@@ -8,6 +8,7 @@ const Introduction: FC = () => {
   const { t } = useTranslation()
   return (
     <>
+    <Card>
       <Space direction='vertical'>
         <Title level={4}>{t('introduction')}</Title>
         <Paragraph>{t('passion, curiosity, empathy')}</Paragraph>
@@ -16,6 +17,7 @@ const Introduction: FC = () => {
         <Paragraph>{t('methodology')}</Paragraph>
         <Paragraph>{t('gaming')}</Paragraph>
       </Space>
+    </Card>
     </>
   )
 }

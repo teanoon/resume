@@ -1,4 +1,4 @@
-import { Col, Progress, Row, Statistic, Typography } from 'antd'
+import { Card, Col, Progress, Row, Statistic, Typography } from 'antd'
 import { formatDuration } from 'date-fns'
 import { enUS, zhCN } from 'date-fns/locale'
 import React, { FC } from 'react'
@@ -7,48 +7,44 @@ import { useTranslation } from 'react-i18next'
 const { Text } = Typography
 
 const Statistics: FC = () => {
-  const { t } = useTranslation()
-  const YearProgress: FC<{ year: number }> = ({ year }) => {
-    const { i18n } = useTranslation()
-    const maxYear = 0.07
-    const locale: Locale = i18n.language === 'zh-CN' ? zhCN : enUS
-    const format = (percent?: number) => formatDuration({ years: (percent || 0) * maxYear }, { locale })
-    return <Progress percent={year / maxYear} format={format} />
-  }
+  const { t, i18n } = useTranslation()
+  const locale = i18n.language === 'zh-CN' ? zhCN : enUS
   return (
     <>
+    <Card>
       <Row gutter={[16, 16]}>
-        <Col xs={24} lg={12}>
+        <Col sm={24} md={12}>
           <Row gutter={[16, 16]}>
             <Col span={12}>
-              <Statistic title={t('example')} value={1234} />
+              <Statistic title={t('developer-years')} value={formatDuration({ years: 6 }, { locale })} />
             </Col>
             <Col span={12}>
-              <Statistic title={t('example')} value={1234} />
+              <Statistic title={t('pm-years')} value={formatDuration({ years: 4 }, { locale })} />
             </Col>
             <Col span={12}>
-              <Statistic title={t('example')} value={1234} />
+              <Statistic title={t('manager-years')} value={formatDuration({ years: 6 }, { locale })} />
             </Col>
             <Col span={12}>
-              <Statistic title={t('example')} value={1234} />
+              <Statistic title={t('team-size')} value={`6 ${t('people')}`} />
             </Col>
           </Row>
         </Col>
-        <Col xs={24} lg={12}>
+        <Col sm={22} md={10}>
           <Text>Java/Spring/ElasticSearch</Text>
-          <YearProgress year={6} />
+          <Progress percent={80} format={() => t('expert')} />
           <Text>Manage/Lead</Text>
-          <YearProgress year={6} />
+          <Progress percent={65} format={() => t('procifient')} />
           <Text>Docker/OPS</Text>
-          <YearProgress year={4} />
+          <Progress percent={60} format={() => t('procifient')} />
           <Text>Typescript/Angular/React</Text>
-          <YearProgress year={2} />
+          <Progress percent={40} format={() => t('procifient')} />
           <Text>Ruby On Rails/Python</Text>
-          <YearProgress year={2} />
+          <Progress percent={40} format={() => t('procifient')} />
           <Text>Tensorflow + SageMaker</Text>
-          <YearProgress year={1} />
+          <Progress percent={20} format={() => t('competent')} />
         </Col>
       </Row>
+    </Card>
     </>
   )
 }
