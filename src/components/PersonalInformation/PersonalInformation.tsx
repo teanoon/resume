@@ -2,7 +2,7 @@ import { Avatar, Card, Descriptions, Divider, Space, Typography } from 'antd'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { UserOutlined } from '@ant-design/icons'
+import portrait from './portrait.jpg'
 
 const { Title } = Typography
 
@@ -15,7 +15,7 @@ const PersonalInformation: FC = () => {
         <Space direction='vertical'>
           <Avatar
             size={100}
-            icon={<UserOutlined />}
+            icon={<img src={portrait} alt='portrait' />}
             />
           <Title level={3}>{t('username')}</Title>
         </Space>
