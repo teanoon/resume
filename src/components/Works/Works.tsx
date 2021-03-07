@@ -1,6 +1,7 @@
 import { Card, Col, Row, Timeline, Typography } from 'antd'
 import React, { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import Education from '../Education/Education'
 
 const { Title, Paragraph } = Typography
 
@@ -43,6 +44,9 @@ const Works: FC = () => {
                 </ol>
               </Timeline.Item>
             </Timeline>
+          </Card>
+          <Card>
+            <Education />
           </Card>
         </Col>
         <Col xs={24} lg={12}>

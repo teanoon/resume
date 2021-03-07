@@ -1,15 +1,18 @@
 import './index.css'
 import './i18n'
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { Result } from 'antd'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={<Result status='info' />}>
+      <App />
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 )

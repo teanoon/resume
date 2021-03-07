@@ -17,17 +17,17 @@ const PersonalInformation: FC = () => {
             size={100}
             icon={<img src={portrait} alt='portrait' />}
             />
-          <Title level={3}>{t('username')}</Title>
+          <Title level={3}>{t('user-name')}</Title>
         </Space>
       </Divider>
       <Card>
-        <Descriptions layout='vertical'>
-          <Descriptions.Item label={t('title')}>{t('user.name')}</Descriptions.Item>
-          <Descriptions.Item label={t('role')}>{t('user.role')}</Descriptions.Item>
-          <Descriptions.Item label={t('live')}>{t('user.live')}</Descriptions.Item>
-          <Descriptions.Item label={t('birth')}>{t('user.birth')}</Descriptions.Item>
-          <Descriptions.Item label={t('email')}>{t('user.email')}</Descriptions.Item>
-          <Descriptions.Item label={t('telephone')}>{t('user.telephone')}</Descriptions.Item>
+        <Descriptions>
+          <Descriptions.Item label={t('title')}>{t('user-title')}</Descriptions.Item>
+          <Descriptions.Item label={t('role')}>{t('user-role')}</Descriptions.Item>
+          <Descriptions.Item label={t('live')}>{t('user-live')}</Descriptions.Item>
+          <Descriptions.Item label={t('birth')}>{t('user-birth')}</Descriptions.Item>
+          <Descriptions.Item label={t('email')}>{t('user-email')}</Descriptions.Item>
+          <Descriptions.Item label={t('telephone')}>{t('user-telephone')}</Descriptions.Item>
         </Descriptions>
       </Card>
     </>

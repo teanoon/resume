@@ -23,7 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "i18n": "i18next src/**/*.{ts,tsx} -o public/locales/zh-CN/translation.json"
+    "i18n:zh-CN": "i18next src/**/*.{ts,tsx} -o public/locales/zh-CN/translation.json",
+    "i18n:en-US": "i18next src/**/*.{ts,tsx} -o public/locales/en-US/translation.json",
+    "i18n": "npm run i18n:zh-CN && npm run i18n:en-US"
   },
   "eslintConfig": {
     "extends": [

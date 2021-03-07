@@ -46,7 +46,7 @@ const Statistics: FC = () => {
           <Text>Ruby On Rails/Python</Text>
           <YearProgress year={2} />
           <Text>Tensorflow + SageMaker</Text>
-          <YearProgress year={0.5} />
+          <YearProgress year={1} />
         </Col>
       </Row>
     </>
