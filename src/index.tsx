@@ -4,6 +4,7 @@ import './i18n'
 import { Result } from 'antd'
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import App from './App'
 import reportWebVitals from './reportWebVitals'
@@ -11,7 +12,13 @@ import reportWebVitals from './reportWebVitals'
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback={<Result status='info' />}>
-      <App />
+      <Router>
+        <Switch>
+          <Route path='/'>
+            <App />
+          </Route>
+        </Switch>
+      </Router>
     </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
