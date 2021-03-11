@@ -20,6 +20,9 @@ const App: FC = () => {
   const params = parse(location.search.slice(1))
   const { t, i18n } = useTranslation()
   useEffect(() => {
+    if (!params['language']) {
+      return
+    }
     if (params['language'] === 'en' && i18n.language === 'en-US') {
       return
     }
