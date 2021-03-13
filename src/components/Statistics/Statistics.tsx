@@ -19,6 +19,9 @@ const Statistics: FC = () => {
               <Statistic title={t('developer-years')} value={formatDuration({ years: 6 }, { locale })} />
             </Col>
             <Col span={12}>
+              <Statistic title={t('commits-per-year')} value={'1.4k'} />
+            </Col>
+            <Col span={12}>
               <Statistic title={t('pm-years')} value={formatDuration({ years: 4 }, { locale })} />
             </Col>
             <Col span={12}>
@@ -30,14 +33,14 @@ const Statistics: FC = () => {
           </Row>
         </Col>
         <Col sm={22} md={10}>
-          <Text>Java/Spring/ElasticSearch</Text>
+          <Text>Java/MicroService/ElasticSearch</Text>
           <Progress percent={80} format={() => t('expert')} />
-          <Text>Manage/Lead</Text>
-          <Progress percent={65} format={() => t('procifient')} />
+          <Text>Spring Boot/Framework/Data/Cloud/Security</Text>
+          <Progress percent={75} format={() => t('expert')} />
           <Text>Docker/OPS</Text>
           <Progress percent={60} format={() => t('procifient')} />
-          <Text>Typescript/Angular/React</Text>
-          <Progress percent={40} format={() => t('procifient')} />
+          <Text>MySQL/Redis/Mongo/DynamoDB</Text>
+          <Progress percent={45} format={() => t('procifient')} />
           <Text>Ruby On Rails/Python</Text>
           <Progress percent={40} format={() => t('procifient')} />
           <Text>Tensorflow + SageMaker</Text>
