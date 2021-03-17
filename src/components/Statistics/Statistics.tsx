@@ -41,7 +41,7 @@ const Statistics: FC = () => {
           <Progress percent={60} format={() => t('procifient')} />
           <Text>MySQL/Redis/Mongo/DynamoDB</Text>
           <Progress percent={45} format={() => t('procifient')} />
-          <Text>Ruby On Rails/Python</Text>
+          <Text>Ruby On Rails/Flask/React</Text>
           <Progress percent={40} format={() => t('procifient')} />
           <Text>Tensorflow + SageMaker</Text>
           <Progress percent={20} format={() => t('competent')} />
