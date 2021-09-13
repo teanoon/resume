@@ -37,11 +37,11 @@ const Statistics: FC = () => {
           <Progress percent={80} format={() => t('expert')} />
           <Text>Spring Boot/Framework/Data/Cloud/Security</Text>
           <Progress percent={75} format={() => t('expert')} />
-          <Text>Docker/OPS</Text>
+          <Text>MySQL/Redis/Mongo/SQS/DynamoDB</Text>
+          <Progress percent={65} format={() => t('procifient')} />
+          <Text>Kubernetes/Docker/OPS</Text>
           <Progress percent={60} format={() => t('procifient')} />
-          <Text>MySQL/Redis/Mongo/DynamoDB</Text>
-          <Progress percent={45} format={() => t('procifient')} />
-          <Text>Ruby On Rails/Flask/React</Text>
+          <Text>Kafka/SQS</Text>
           <Progress percent={40} format={() => t('procifient')} />
           <Text>Tensorflow + SageMaker</Text>
           <Progress percent={20} format={() => t('competent')} />
