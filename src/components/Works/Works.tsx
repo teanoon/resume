@@ -1,4 +1,4 @@
-import { Card, Col, Row, Space, Timeline, Typography } from 'antd'
+import { Card, Col, Row, Space, Typography } from 'antd'
 import React, { FC } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 
