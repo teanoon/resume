@@ -11,11 +11,10 @@ const Introduction: FC = () => {
     <Card>
       <Space direction='vertical'>
         <Title level={4}>{t('introduction')}</Title>
-        <Paragraph>{t('passion, curiosity, empathy')}</Paragraph>
-        <Paragraph>{t('management')}</Paragraph>
-        <Paragraph>{t('love-coding')}</Paragraph>
-        <Paragraph>{t('methodology')}</Paragraph>
-        <Paragraph>{t('gaming')}</Paragraph>
+        <Paragraph>{t('introduction-business')}</Paragraph>
+        <Paragraph>{t('introduction-architecture')}</Paragraph>
+        <Paragraph>{t('introduction-skill')}</Paragraph>
+        <Paragraph>{t('introduction-leadership')}</Paragraph>
       </Space>
     </Card>
     </>
