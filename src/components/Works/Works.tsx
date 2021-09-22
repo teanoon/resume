@@ -1,4 +1,4 @@
-import { Card, Col, Row, Space, Typography } from 'antd'
+import { Card, Col, Row, Space, Timeline, Typography } from 'antd'
 import React, { FC } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 
@@ -10,46 +10,95 @@ const Works: FC = () => {
   return (
     <>
       <Row gutter={[16, 16]}>
-        <Col span={24}>
+        <Col sm={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
           <Card>
-            <Title level={4}>{t('experience')}</Title>
-            <Card title={<Space direction='horizontal'>2015-03 ~ {t('sinbot')} {t('sinobot-role')}</Space>} bordered={false}>
-              <Row gutter={[16, 16]}>
-                <Col sm={24} md={12}>
-                  <Space direction='vertical'>
-                    <Trans t={t} i18nKey='sinobot-develop'>
-                      <Paragraph strong>develop</Paragraph>
-                      <Paragraph>architecture</Paragraph>
-                      <Paragraph>portal</Paragraph>
-                      <Paragraph>image service</Paragraph>
-                      <Paragraph>elasticsearch</Paragraph>
-                      <Paragraph>seo</Paragraph>
-                      <Paragraph>catalog</Paragraph>
-                    </Trans>
-                  </Space>
-                </Col>
-                <Col sm={24} md={12}>
-                  <Space direction='vertical'>
-                    <Trans t={t} i18nKey='sinobot-manage'>
-                      <Paragraph strong>manage</Paragraph>
-                      <Paragraph>interview</Paragraph>
-                      <Paragraph>training</Paragraph>
-                      <Paragraph>review</Paragraph>
-                      <Paragraph>tech-share</Paragraph>
-                      <Paragraph>team-build</Paragraph>
-                    </Trans>
-                  </Space>
-                </Col>
-              </Row>
-            </Card>
+          <Title level={4}>{t('experience')}</Title>
+            <Timeline mode='left'>
+              <Timeline.Item label={<Space direction='vertical'>
+                2015-03 ~
+                {t('sinbot')}
+              </Space>}>
+                <Space direction='vertical'>
+                  <Title level={5}>{t('sinobot-role')}</Title>
+                  <Trans t={t} i18nKey='sinobot-develop'>
+                    <Paragraph strong>develop</Paragraph>
+                    <Paragraph>architecture</Paragraph>
+                    <Paragraph>portal</Paragraph>
+                    <Paragraph>image service</Paragraph>
+                    <Paragraph>elasticsearch</Paragraph>
+                    <Paragraph>seo</Paragraph>
+                    <Paragraph>catalog</Paragraph>
+                  </Trans>
+                  <Trans t={t} i18nKey='sinobot-manage'>
+                    <Paragraph strong>manage</Paragraph>
+                    <Paragraph>interview</Paragraph>
+                    <Paragraph>training</Paragraph>
+                    <Paragraph>review</Paragraph>
+                    <Paragraph>tech-share</Paragraph>
+                    <Paragraph>team-build</Paragraph>
+                  </Trans>
+                </Space>
+              </Timeline.Item>
+              <Timeline.Item label={<Space direction='vertical'>
+                2012-11 ~ 2014-06
+                {t('guanjie')}
+              </Space>}>
+                <Space direction='vertical'>
+                  <Title level={5}>{t('guanjie-role')}</Title>
+                  <Trans t={t} i18nKey='guanjie-product'>
+                    <Paragraph>design credit system</Paragraph>
+                    <Paragraph>design ux</Paragraph>
+                    <Paragraph>operation</Paragraph>
+                  </Trans>
+                </Space>
+              </Timeline.Item>
+              <Timeline.Item label={<Space direction='vertical'>
+                2011-03 ~ 2012-11
+                {t('qqw')}
+              </Space>}>
+                <Space direction='vertical'>
+                  <Title level={5}>{t('qqw-role')}</Title>
+                  <Trans t={t} i18nKey='qqw-product'>
+                    <Paragraph>design ux</Paragraph>
+                    <Paragraph>operation</Paragraph>
+                  </Trans>
+                </Space>
+              </Timeline.Item>
+              <Timeline.Item label={<Space direction='vertical'>
+                2009-11 ~ 2011-03
+                {t('sales')}
+              </Space>}>
+                <Space direction='vertical'>
+                  <Title level={5}>{t('sales-role')}</Title>
+                  <Trans t={t} i18nKey='sales-sale'>
+                    <Paragraph strong>sale plan</Paragraph>
+                    <Paragraph>visit potential customers</Paragraph>
+                    <Paragraph>seo-sem</Paragraph>
+                  </Trans>
+                  <Trans t={t} i18nKey='sales-manage'>
+                    <Paragraph strong>manage</Paragraph>
+                    <Paragraph>make sale plan</Paragraph>
+                    <Paragraph>morning meeting</Paragraph>
+                  </Trans>
+                </Space>
+              </Timeline.Item>
+              <Timeline.Item label={<Space direction='vertical'>
+                2005-09 ~ 2009-05
+                {t('Zhejiang University of Technology')}
+              </Space>}>
+                <Space direction='vertical'>
+                  <Paragraph>{t('applied physics')}</Paragraph>
+                </Space>
+              </Timeline.Item>
+            </Timeline>
           </Card>
         </Col>
-        <Col span={24}>
+        <Col sm={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
           <Card>
             <Space direction='vertical'>
               <Title level={4}>{t('projects')}</Title>
               <Row gutter={[16, 16]}>
-                <Col sm={24} md={24} xl={12}>
+                <Col>
                   <Card title={t('project-elasticsearch-title')} bordered={false}>
                     <Paragraph strong>{t('project-elasticsearch-improve-efficiency')}</Paragraph>
                     <Paragraph>{t('project-elasticsearch-multilingual-support')}</Paragraph>
@@ -68,7 +117,7 @@ const Works: FC = () => {
                     <Paragraph>{t('project-microservice-sdk')}</Paragraph>
                   </Card>
                 </Col>
-                <Col sm={24} md={24} xl={12}>
+                <Col>
                   <Card title={t('project-gradle-title')} bordered={false}>
                     <Paragraph>{t('project-gradle-improve-efficiency')}</Paragraph>
                     <Paragraph>{t('project-gradle-querydsl')}</Paragraph>
