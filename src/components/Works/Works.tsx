@@ -10,7 +10,7 @@ const Works: FC = () => {
   return (
     <>
       <Row gutter={[16, 16]}>
-        <Col sm={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
+        <Col md={{ span: 24, order: 1 }} lg={{ span: 12, order: 2 }}>
           <Card>
           <Title level={4}>{t('experience')}</Title>
             <Timeline mode='left'>
@@ -93,7 +93,7 @@ const Works: FC = () => {
             </Timeline>
           </Card>
         </Col>
-        <Col sm={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
+        <Col md={{ span: 24, order: 1 }} lg={{ span: 12, order: 2 }}>
           <Card>
             <Space direction='vertical'>
               <Title level={4}>{t('projects')}</Title>
