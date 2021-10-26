@@ -19,7 +19,7 @@ const Statistics: FC = () => {
               <Statistic title={t('developer-years')} value={formatDuration({ years: 6 }, { locale })} />
             </Col>
             <Col span={12}>
-              <Statistic title={t('commits-per-year')} value={'1.4k'} />
+              <Statistic title={t('commits-per-year')} value={'1.4k commits'} />
             </Col>
             <Col span={12}>
               <Statistic title={t('pm-years')} value={formatDuration({ years: 4 }, { locale })} />
