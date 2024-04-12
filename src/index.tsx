@@ -1,27 +1,26 @@
-import './index.scss'
 import './i18n'
+import './index.scss'
 
 import { Result } from 'antd'
 import React, { Suspense } from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { createRoot } from 'react-dom/client'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container!)
+root.render(
   <React.StrictMode>
     <Suspense fallback={<Result status='info' />}>
       <Router>
-        <Switch>
-          <Route path='/'>
-            <App />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path='/' element={<App />} />
+        </Routes>
       </Router>
     </Suspense>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function

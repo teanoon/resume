@@ -16,7 +16,7 @@
   "live": "Live",
   "user-live": "Hangzhou, Zhejiang, China",
   "work-year": "Experience",
-  "user-work-year": "12 years/age 35",
+  "user-work-year": "{{year}} years",
   "telephone": "Telephone",
   "user-telephone": "+86 - 13456968682",
   "developer-years": "Develop",

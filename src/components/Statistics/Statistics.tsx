@@ -1,7 +1,7 @@
 import { Card, Col, Progress, Row, Statistic, Typography } from 'antd'
-import { formatDuration } from 'date-fns'
+import { formatDuration, getYear } from 'date-fns'
 import { enUS, zhCN } from 'date-fns/locale'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const { Text } = Typography
@@ -9,6 +9,7 @@ const { Text } = Typography
 const Statistics: FC = () => {
   const { t, i18n } = useTranslation()
   const locale = i18n.language === 'zh-CN' ? zhCN : enUS
+  const devYears = getYear(new Date()) - 2015
   return (
     <>
     <Card>
@@ -16,7 +17,7 @@ const Statistics: FC = () => {
         <Col sm={24} md={12}>
           <Row gutter={[16, 16]}>
             <Col span={12}>
-              <Statistic title={t('developer-years')} value={formatDuration({ years: 6 }, { locale })} />
+              <Statistic title={t('developer-years')} value={formatDuration({ years: devYears }, { locale })} />
             </Col>
             <Col span={12}>
               <Statistic title={t('commits-per-year')} value={'1.4k commits'} />
@@ -25,7 +26,7 @@ const Statistics: FC = () => {
               <Statistic title={t('pm-years')} value={formatDuration({ years: 4 }, { locale })} />
             </Col>
             <Col span={12}>
-              <Statistic title={t('manager-years')} value={formatDuration({ years: 6 }, { locale })} />
+              <Statistic title={t('manager-years')} value={formatDuration({ years: devYears }, { locale })} />
             </Col>
             <Col span={12}>
               <Statistic title={t('team-size')} value={`6 ${t('people')}`} />

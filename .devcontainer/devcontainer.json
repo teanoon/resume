@@ -1,47 +1,41 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/python-3
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-	"name": "Monaco Language Client",
-	"build": {
-		"dockerfile": "../Dockerfile",
-		"context": "..",
-		"args": {
-			"http_proxy": "${localEnv:DOCKER_PROXY}",
-			"https_proxy": "${localEnv:DOCKER_PROXY}"
-		}
-	},
+    "name": "resume",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
 
-	"containerEnv": {
-		"http_proxy": "${localEnv:DOCKER_PROXY}",
-		"https_proxy": "${localEnv:DOCKER_PROXY}"
-	},
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
 
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash"
-	},
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
 
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"eg2.vscode-npm-script",
-		"dbaeumer.vscode-eslint",
-		"formulahendry.code-runner",
-		"firsttris.vscode-jest-runner",
-		"mike-co.import-sorter",
-		"k--kato.intellij-idea-keybindings",
-		"editorconfig.editorconfig"
-	],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "yarn install",
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "firsttris.vscode-jest-runner",
+                "mike-co.import-sorter",
+                "k--kato.intellij-idea-keybindings",
+                "editorconfig.editorconfig",
+                "GitHub.copilot"
+            ]
+        }
+    },
+    "runArgs": [
+        "--add-host=host.docker.internal:host-gateway"
+    ],
+    "remoteEnv": {
+        "http_proxy": "${env:DOCKER_PROXY}",
+        "https_proxy": "${env:DOCKER_PROXY}",
+        "PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/node_modules/.bin"
+    }
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
-
-	"mounts": [
-		"source=vscode-node-extensions,target=/home/node/.vscode-server/extensions,type=volume"
-	],
-
-	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "node"
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
 }

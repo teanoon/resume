@@ -1,4 +1,4 @@
-import { Card, Col, Row, Space, Timeline, Typography } from 'antd'
+import { Card, Col, Row, Space, Timeline, Typography, TimelineItemProps } from 'antd'
 import React, { FC } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 
@@ -6,91 +6,94 @@ const { Title, Paragraph } = Typography
 
 const Works: FC = () => {
   const { t } = useTranslation()
+  const items: TimelineItemProps[] = [
+    {
+      label: (
+        <Space direction='vertical'>
+          2015-03 ~
+          {t('sinbot')}
+        </Space>
+      ),
+      children: (
+        <Space direction='vertical'>
+          <Title level={5}>{t('sinobot-role')}</Title>
+          <Trans t={t} i18nKey='sinobot-develop'>
+            <Paragraph strong>develop</Paragraph>
+            <Paragraph>architecture</Paragraph>
+            <Paragraph>portal</Paragraph>
+            <Paragraph>image service</Paragraph>
+            <Paragraph>elasticsearch</Paragraph>
+            <Paragraph>seo</Paragraph>
+            <Paragraph>catalog</Paragraph>
+          </Trans>
+          <Trans t={t} i18nKey='sinobot-manage'>
+            <Paragraph strong>manage</Paragraph>
+            <Paragraph>interview</Paragraph>
+            <Paragraph>training</Paragraph>
+            <Paragraph>review</Paragraph>
+            <Paragraph>tech-share</Paragraph>
+            <Paragraph>team-build</Paragraph>
+          </Trans>
+        </Space>
+      )
+    },
+    {
+      label: (
+        <Space direction='vertical'>
+          2012-11 ~ 2014-06
+          {t('guanjie')}
+        </Space>
+      ),
+      children: (
+        <Space direction='vertical'>
+          <Title level={5}>{t('guanjie-role')}</Title>
+          <Trans t={t} i18nKey='guanjie-product'>
+            <Paragraph>design credit system</Paragraph>
+            <Paragraph>design ux</Paragraph>
+            <Paragraph>operation</Paragraph>
+          </Trans>
+        </Space>
+      )
+    },
+    {
+      label: (
+        <Space direction='vertical'>
+          2011-03 ~ 2012-11
+          {t('qqw')}
+        </Space>
+      ),
+      children: (
+        <Space direction='vertical'>
+          <Title level={5}>{t('qqw-role')}</Title>
+          <Trans t={t} i18nKey='qqw-product'>
+            <Paragraph>design ux</Paragraph>
+            <Paragraph>operation</Paragraph>
+          </Trans>
+        </Space>
+      )
+    },
+    {
+      label: (
+        <Space direction='vertical'>
+          2005-09 ~ 2009-05
+          {t('Zhejiang University of Technology')}
+        </Space>
+      ),
+      children: (
+        <Space direction='vertical'>
+          <Paragraph>{t('applied physics')}</Paragraph>
+        </Space>
+      )
+    }
+  ]
 
   return (
     <>
       <Row gutter={[16, 16]}>
         <Col md={{ span: 24, order: 1 }} lg={{ span: 12, order: 2 }}>
           <Card>
-          <Title level={4}>{t('experience')}</Title>
-            <Timeline mode='left'>
-              <Timeline.Item label={<Space direction='vertical'>
-                2015-03 ~
-                {t('sinbot')}
-              </Space>}>
-                <Space direction='vertical'>
-                  <Title level={5}>{t('sinobot-role')}</Title>
-                  <Trans t={t} i18nKey='sinobot-develop'>
-                    <Paragraph strong>develop</Paragraph>
-                    <Paragraph>architecture</Paragraph>
-                    <Paragraph>portal</Paragraph>
-                    <Paragraph>image service</Paragraph>
-                    <Paragraph>elasticsearch</Paragraph>
-                    <Paragraph>seo</Paragraph>
-                    <Paragraph>catalog</Paragraph>
-                  </Trans>
-                  <Trans t={t} i18nKey='sinobot-manage'>
-                    <Paragraph strong>manage</Paragraph>
-                    <Paragraph>interview</Paragraph>
-                    <Paragraph>training</Paragraph>
-                    <Paragraph>review</Paragraph>
-                    <Paragraph>tech-share</Paragraph>
-                    <Paragraph>team-build</Paragraph>
-                  </Trans>
-                </Space>
-              </Timeline.Item>
-              <Timeline.Item label={<Space direction='vertical'>
-                2012-11 ~ 2014-06
-                {t('guanjie')}
-              </Space>}>
-                <Space direction='vertical'>
-                  <Title level={5}>{t('guanjie-role')}</Title>
-                  <Trans t={t} i18nKey='guanjie-product'>
-                    <Paragraph>design credit system</Paragraph>
-                    <Paragraph>design ux</Paragraph>
-                    <Paragraph>operation</Paragraph>
-                  </Trans>
-                </Space>
-              </Timeline.Item>
-              <Timeline.Item label={<Space direction='vertical'>
-                2011-03 ~ 2012-11
-                {t('qqw')}
-              </Space>}>
-                <Space direction='vertical'>
-                  <Title level={5}>{t('qqw-role')}</Title>
-                  <Trans t={t} i18nKey='qqw-product'>
-                    <Paragraph>design ux</Paragraph>
-                    <Paragraph>operation</Paragraph>
-                  </Trans>
-                </Space>
-              </Timeline.Item>
-              <Timeline.Item label={<Space direction='vertical'>
-                2009-11 ~ 2011-03
-                {t('sales')}
-              </Space>}>
-                <Space direction='vertical'>
-                  <Title level={5}>{t('sales-role')}</Title>
-                  <Trans t={t} i18nKey='sales-sale'>
-                    <Paragraph strong>sale plan</Paragraph>
-                    <Paragraph>visit potential customers</Paragraph>
-                    <Paragraph>seo-sem</Paragraph>
-                  </Trans>
-                  <Trans t={t} i18nKey='sales-manage'>
-                    <Paragraph strong>manage</Paragraph>
-                    <Paragraph>make sale plan</Paragraph>
-                    <Paragraph>morning meeting</Paragraph>
-                  </Trans>
-                </Space>
-              </Timeline.Item>
-              <Timeline.Item label={<Space direction='vertical'>
-                2005-09 ~ 2009-05
-                {t('Zhejiang University of Technology')}
-              </Space>}>
-                <Space direction='vertical'>
-                  <Paragraph>{t('applied physics')}</Paragraph>
-                </Space>
-              </Timeline.Item>
-            </Timeline>
+            <Title level={4}>{t('experience')}</Title>
+            <Timeline mode='left' items={items} />
           </Card>
         </Col>
         <Col md={{ span: 24, order: 1 }} lg={{ span: 12, order: 2 }}>

@@ -3,11 +3,13 @@ import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import portrait from './portrait.jpg'
+import { getYear } from 'date-fns'
 
 const { Title } = Typography
 
 const PersonalInformation: FC = () => {
   const { t } = useTranslation()
+  const year = getYear(new Date()) - 2009
 
   return (
     <>
@@ -26,7 +28,7 @@ const PersonalInformation: FC = () => {
           <Descriptions.Item label={t('education')}>{t('user-education')}</Descriptions.Item>
           <Descriptions.Item label={t('email')}>{t('user-email')}</Descriptions.Item>
           <Descriptions.Item label={t('live')}>{t('user-live')}</Descriptions.Item>
-          <Descriptions.Item label={t('work-year')}>{t('user-work-year')}</Descriptions.Item>
+          <Descriptions.Item label={t('work-year')}>{t('user-work-year', { year })}</Descriptions.Item>
           <Descriptions.Item label={t('telephone')}>{t('user-telephone')}</Descriptions.Item>
         </Descriptions>
       </Card>
