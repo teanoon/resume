@@ -35,17 +35,17 @@ const Statistics: FC = () => {
         </Col>
         <Col sm={22} md={10}>
           <Text>Java/MicroService/ElasticSearch</Text>
-          <Progress percent={80} format={() => t('expert')} />
+          <Progress percent={99} format={() => t('expert')} />
           <Text>Spring Boot/Framework/Data/Cloud/Security</Text>
-          <Progress percent={75} format={() => t('expert')} />
-          <Text>MySQL/Redis/Mongo/SQS/DynamoDB</Text>
-          <Progress percent={65} format={() => t('procifient')} />
-          <Text>Kubernetes/Docker/OPS</Text>
-          <Progress percent={60} format={() => t('procifient')} />
-          <Text>Ruby On Rails/Flask/React</Text>
-          <Progress percent={40} format={() => t('procifient')} />
+          <Progress percent={99} format={() => t('expert')} />
+          <Text>Kubernetes/Docker/OPS/APM</Text>
+          <Progress percent={85} format={() => t('expert')} />
+          <Text>Clickhouse/MySQL/Redis/Mongo/SQS/DynamoDB</Text>
+          <Progress percent={75} format={() => t('procifient')} />
+          <Text>Go/Ruby On Rails/Flask/React</Text>
+          <Progress percent={75} format={() => t('procifient')} />
           <Text>Tensorflow + SageMaker</Text>
-          <Progress percent={20} format={() => t('competent')} />
+          <Progress percent={50} format={() => t('competent')} />
         </Col>
       </Row>
     </Card>
