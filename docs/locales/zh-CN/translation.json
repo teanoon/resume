@@ -16,7 +16,7 @@
   "live": "城市",
   "user-live": "浙江杭州",
   "work-year": "年限",
-  "user-work-year": "12年/35岁",
+  "user-work-year": "{{year}}年",
   "telephone": "手机",
   "user-telephone": "13456968682",
   "developer-years": "代码开发",
