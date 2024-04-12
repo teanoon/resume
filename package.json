@@ -1,6 +1,5 @@
 {
   "name": "resume",
-  "homepage": "https://teanoon.github.io/resume",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
